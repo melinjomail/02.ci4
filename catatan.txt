@@ -1,0 +1,7 @@
+04 Belajar Codeigniter 4 Indonesia - Konfigurasi Environment
+    https://www.youtube.com/watch?v=Qy3-2BeRqVg&list=PLYfaT5HP5yRq0DM2DnSdrd6Xb4-Y9GTuu&index=4
+    Rename file menjadi .env
+    Rubah isi file .env menjadi dari # CI_ENVIRONMENT = production ke  CI_ENVIRONMENT = development
+
+05 Belajar Codeigniter 4 Indonesia - Routes Dan Controller
+    https://www.youtube.com/watch?v=45D-zwo5OQo&list=PLYfaT5HP5yRq0DM2DnSdrd6Xb4-Y9GTuu&index=5
