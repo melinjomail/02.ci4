@@ -5,3 +5,5 @@
 
 05 Belajar Codeigniter 4 Indonesia - Routes Dan Controller
     https://www.youtube.com/watch?v=45D-zwo5OQo&list=PLYfaT5HP5yRq0DM2DnSdrd6Xb4-Y9GTuu&index=5
+
+06 AutoRoute
