@@ -80,4 +80,7 @@ Controler
                 echo view($page);
             }
             ?>
+
+
+catatan baru bos
     
