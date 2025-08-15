@@ -82,5 +82,5 @@ Controler
             ?>
 
 
-catatan baru bos
+catatan hilang bos
     
