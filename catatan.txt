@@ -4,6 +4,80 @@
     Rubah isi file .env menjadi dari # CI_ENVIRONMENT = production ke  CI_ENVIRONMENT = development
 
 05 Belajar Codeigniter 4 Indonesia - Routes Dan Controller
-    https://www.youtube.com/watch?v=45D-zwo5OQo&list=PLYfaT5HP5yRq0DM2DnSdrd6Xb4-Y9GTuu&index=5
+Routes
+    Tempat seting URL dari file php yang kita panggil dari Controller
+    Tempat membaca file controller dan methode, untuk di jadikan URL
+    Huruf depan URL, Controller wajib besar (methode tidak wajib huruf besar)
 
-06 AutoRoute
+    $routes->get('/', 'Home::index'); (Url root, Membaca file Controller home, membaca perintah methode index di file Controller/home.php)
+    $routes->get('/Home', 'Home::index'); (url home, membaca file controller home.php, membaca perintah methode index di file Controller/home.php)
+
+
+Controler
+    File Home.php(file controller, Huruf depan wajib huruf besar)
+    Isi nama Class harus sama dengan nama file controller
+    nama methode nya kecil semua
+
+    class Home extends BaseController (class Home - nama Home harus sama dengan nama file controller home.php)
+{
+    public function index - (index ini di sebut methode)    {
+        echo '<h1>Halaman Utama Web</h1>';
+        // return view('welcome_message'); (memanggil file welcome_message.php yang berada di folder Views)
+        // return view('v_home'); (memanggil file v_home.php yang berada di folder Views)
+    }
+}
+
+    php saprk make:controller Sekolah (perintah membuat file controller)
+
+
+06 Belajar Codeigniter 4 Indonesia - Controller Dan View
+    Langkah membuat Router, Controller, Views (buat file di Views, buat Routes, kemudian buat file Controller nya)
+
+    Nama file di folder Views huruf kecil semua (biasa nya huruf depan nya dikasi huruf v_ contoh v_home.php)
+    <a href="<?= base_url('Home/Artikel') ?>">Artikel</a> (contoh memanggil link dari url - Home: nama Controller nya, index: nama methode nya)
+
+
+07 Belajar Codeigniter 4 Indonesia - Auto Routes
+
+
+08 Belajar Codeigniter 4 Indonesia - Page Dinamis
+    FIle yang terlibat
+    1. Config/Routes.php (alamat nya)
+    2. Controllers/Home.php
+    3. Views/v_artikel.php (isi konten nya)
+    4. Views/about.php (isi konten nya)
+    5. Views/v_template.php (merupakan template nya)
+    
+
+    1.    Isi file Routers.php
+        $routes->get('/Artikel', 'Home::Artikel'); (Url root, Membaca file Controller home, membaca perintah methode index di file Controller/home.php)
+        $routes->get('/About', 'Home::About'); (url home, membaca file controller home.php, membaca perintah methode index di file Controler/home.php)
+
+    2.    Isi file controller Home.php
+
+        class Home extends BaseController
+        {
+            public function Artikel()
+            {
+                $data = [
+                    'page' => 'v_artikel',
+                ];
+                return view('v_template', $data);
+            }
+
+            public function About()
+            {
+                $data = [
+                    'page' => 'v_about',
+                ];
+                return view('v_template', $data);
+            }
+        }
+
+    4.    File v_template.php
+            <?php
+            if ($page) {
+                echo view($page);
+            }
+            ?>
+    
