@@ -90,5 +90,5 @@ Controler
             ?>
 
 
-catatan hilang bos
+catatan hilang boss
     
