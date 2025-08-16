@@ -27,7 +27,7 @@ Controler
     }
 }
 
-    php saprk make:controller Sekolah (perintah membuat file controller)
+    php spark make:controller Sekolah (perintah membuat file controller)
 
 
 06 Belajar Codeigniter 4 Indonesia - Controller Dan View
@@ -38,6 +38,14 @@ Controler
 
 
 07 Belajar Codeigniter 4 Indonesia - Auto Routes
+    app/Config/Routing.php
+    public bool $autoRoute = true;
+
+    app/Config/Feature.php
+    public bool $autoRoutesImproved = true;
+
+    kalau contoh di video app/Config/Routes.php
+    $routes->setAutoRoute(true);
 
 
 08 Belajar Codeigniter 4 Indonesia - Page Dinamis
