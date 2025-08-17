@@ -35,7 +35,7 @@ Controler
     Langkah membuat Router, Controller, Views (buat file di Views, buat Routes, kemudian buat file Controller nya)
 
     Nama file di folder Views huruf kecil semua (biasa nya huruf depan nya dikasi huruf v_ contoh v_home.php)
-    <a href="<?= base_url('Home/Artikel') ?>">Artikel</a> (contoh memanggil link dari url - Home: nama Controller nya, index: nama methode nya)
+    <a href="<?= base_url('Home/Artikel') ?>"Artikel</a> (contoh memanggil link dari url - Home: nama Controller nya, index: nama methode nya)
 
     Jika di Routes $routes->get('Home', 'Home::index'); Di link Views Bisa di tulis dengan
     <a href="<?= base_url('Home') ?>">Welcome</a>
