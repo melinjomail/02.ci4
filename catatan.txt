@@ -8,6 +8,7 @@ Routes
     Tempat seting URL dari file php yang kita panggil dari Controller
     Tempat membaca file controller dan methode, untuk di jadikan URL
     Huruf depan URL, Controller wajib besar (methode tidak wajib huruf besar)
+    Script URL, Methode : huruf besar kecil berpengaruh
 
     $routes->get('/', 'Home::index'); (Url root, Membaca file Controller home, membaca perintah methode index di file Controller/home.php)
     $routes->get('/Home', 'Home::index'); (url home, membaca file controller home.php, membaca perintah methode index di file Controller/home.php)
@@ -35,6 +36,12 @@ Controler
 
     Nama file di folder Views huruf kecil semua (biasa nya huruf depan nya dikasi huruf v_ contoh v_home.php)
     <a href="<?= base_url('Home/Artikel') ?>">Artikel</a> (contoh memanggil link dari url - Home: nama Controller nya, index: nama methode nya)
+
+    Jika di Routes $routes->get('Home', 'Home::index'); Di link Views Bisa di tulis dengan
+    <a href="<?= base_url('Home') ?>">Welcome</a>
+    <a href="<?= base_url('/Home') ?>">Welcome</a>
+    <a href="<?= base_url('/Home/') ?>">Welcome</a>
+    
 
 
 07 Belajar Codeigniter 4 Indonesia - Auto Routes
